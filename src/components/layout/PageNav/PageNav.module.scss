@@ -1,0 +1,9 @@
+@import '../../../styles/settings.scss';
+
+.component {
+  padding: $base-size;
+
+  nav * {
+    padding-right: $base-size;
+  }
+}
