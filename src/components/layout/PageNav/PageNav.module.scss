@@ -2,8 +2,9 @@
 
 .component {
   padding: $base-size;
+  margin-left: auto;
 
-  nav * {
-    padding-right: $base-size;
+  .link {
+    color: inherit;
   }
 }
