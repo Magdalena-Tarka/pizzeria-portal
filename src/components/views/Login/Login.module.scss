@@ -2,4 +2,21 @@
 
 .component {
   padding: $base-size;
+  min-height: 90vh;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: auto;
+
+    .input {
+      margin: 6px;
+    }
+
+    .button {
+      width: 40%;
+      margin: 6px auto;
+    }
+  }
 }

@@ -1,11 +1,36 @@
 import React from 'react';
 import styles from './Login.module.scss';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
 
 const Login = () => {
   return (
-    <div className={styles.component}>
-      <h2>Login view</h2>
-    </div>
+    <Paper className={styles.component}>
+      <Typography variant="h4" component="h4" gutterBottom>
+        Sing In
+      </Typography>
+      <form className={styles.wrapper}>
+        <TextField
+          className={styles.input}
+          required
+          id="outlined-basic"
+          label="Login"
+          variant="outlined"
+        />
+        <TextField
+          className={styles.input}
+          required
+          id="outlined-password-input"
+          label="Password"
+          type="password"
+          autoComplete="current-password"
+          variant="outlined"
+        />
+        <Button className={styles.button} variant="contained">Log In</Button>
+      </form>
+    </Paper>
   );
 };
 
