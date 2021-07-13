@@ -153,8 +153,8 @@ const Kitchen = () => {
                           <div className={styles.orderProduct_amount}>Quantity: {product.amount}</div>
                         </div>
                         <List className={styles.orderProduct_details}>
-                          {product.params.map(param => (
-                            <ListItem key={product.params[param]}className={styles.orderProduct_option}>
+                          {product.params.map((param, index) => (
+                            <ListItem key={index} className={styles.orderProduct_option}>
                               <span className={styles.orderProduct_optionLabel}>
                                 {param.label}:
                               </span>

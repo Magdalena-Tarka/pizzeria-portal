@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Login.module.scss';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -28,7 +29,14 @@ const Login = () => {
           autoComplete="current-password"
           variant="outlined"
         />
-        <Button className={styles.button} variant="contained">Log In</Button>
+        <Button
+          className={styles.button}
+          variant="contained"
+          component={Link}
+          to={`${process.env.PUBLIC_URL}/`}
+        >
+          Log In
+        </Button>
       </form>
     </Paper>
   );

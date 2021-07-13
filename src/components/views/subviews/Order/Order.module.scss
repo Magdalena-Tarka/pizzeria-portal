@@ -2,4 +2,147 @@
 
 .component {
   padding: $base-size;
+  margin: $base-size 0;
+
+  .sectionMenu {
+    margin-bottom: $base-size;
+
+    .menu {
+      margin-bottom: $base-size;
+      background: #f5f6fa;
+
+      .tableHead {
+        * {
+          padding-top: 6px;
+          padding-bottom: 6px;
+        }
+      }
+
+      .tableBody {
+        & > * {
+          padding-top: 6px;
+          padding-bottom: 6px;
+        }
+      }
+
+      .paramWrapper {
+        * {
+          font-size: 14px;
+        }
+
+        & > *:not(:last-child)  {
+          margin-bottom: 12px;
+        }
+
+        .paramName {
+          margin: 6px 0 2px 0;
+          text-transform: capitalize;
+        }
+
+        * {
+          padding-bottom: 0;
+          padding-top: 0;
+        }
+
+        .select {
+          * {
+            padding-bottom: 4px;
+            padding-top: 4px;
+
+            svg {
+              font-size: 28px;
+              margin-bottom: -4px;
+            }
+          }
+        }
+      }
+
+      .addToCart {
+        line-height: 1;
+      }
+    }
+  }
+
+  .sectionOrder {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+
+    .order_header {
+      font-weight: 600;
+      text-transform: uppercase;
+      border-bottom: 1px solid lightgrey;
+      margin-bottom: 8px;
+      padding: 8px 12px;
+    }
+    .order_body {
+      margin-bottom: 8px;
+      border-bottom: 1px solid lightgrey;
+      min-height: 2 * $base-size;
+
+      .orderProduct_wrapper {
+        padding: 8px 12px;
+
+        .orderProduct_name {
+          font-weight: 500;
+        }
+
+        .orderProduct_option {
+          color: grey;
+          padding-top: 2px;
+          padding-bottom: 2px;
+
+          .orderProduct_optionLabel {
+            font-weight: 500;
+            margin-right: 6px;
+          }
+        }
+
+        .orderProduct_amount {
+          font-weight: 500;
+        }
+
+        .orderProduct_price {
+          font-weight: 500;
+        }
+
+        .orderProduct_action {
+          * {
+            cursor: pointer;
+          }
+
+          & > *:not(:last-child) {
+            margin-right: 2 * $base-size;
+          }
+        }
+      }
+    }
+
+    .orderSummary {
+      margin-bottom: 8px;
+      padding: 8px 12px;
+
+      .orderSummary_tableNr * {
+        padding: 2px 0;
+      }
+
+      .orderSummary_details {
+        * {
+          padding: 0;
+        }
+
+        & > *:not(:last-child) {
+          padding-bottom: 8px;
+        }
+      }
+
+      .orderSummary_detailsAmount {
+        * {
+          padding: 0;
+        }
+
+        & > *:not(:last-child) {
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
 }
