@@ -38,12 +38,6 @@ export const fetchFromAPI = () => {    // Nasz kreator thunka, czyli fetchFromAP
 };
 export const updateStatusInAPI = (id, status) => {
   return (dispatch, getState) => {
-    console.log('id 1:', id);
-    console.log('status 1:', status);
-    dispatch(updateTableStatus());
-    console.log('id 2:', id);
-    console.log('status 2:', status);
-
     Axios
       .put(`${api.url}/api/${api.tables}/${id}`, {status})
       .then(res => {

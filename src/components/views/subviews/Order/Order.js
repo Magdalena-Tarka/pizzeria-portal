@@ -467,7 +467,7 @@ const Order = () => {
               <Grid item xs={2}>Action</Grid>
             </Grid>
             <Grid item xs={12} container className={styles.order_body}>
-              {demoOrder.map((row,) => (
+              {demoOrder.map(row => (
                 <Grid container key={row.orderId}>
                   {row.orderId.toString() === orderNumber && <>
                     {row.products.map(product => (
@@ -477,7 +477,7 @@ const Order = () => {
                             <Grid item className={styles.orderProduct_name}>{product.name}</Grid>
                             <List className={styles.orderProduct_details}>
                               {product.params.map(param => (
-                                <ListItem key={product.params[param]}className={styles.orderProduct_option}>
+                                <ListItem key={param.label}className={styles.orderProduct_option}>
                                   <span className={styles.orderProduct_optionLabel}>{param.label}:</span>
                                   <span className={styles.orderProduct_optionName}>{param.options.join(', ')}</span>
                                 </ListItem>
@@ -521,7 +521,7 @@ const Order = () => {
                       {order.orderId.toString() === orderNumber &&
                         (order.takeAway === true ?
                           'TAKE AWAY' : <>
-                            Table Nr: <input type="number" value={order.tableId} min={1} max={9} />
+                            Table Nr: <input type="number" defaultValue={order.tableId} min={1} max={9} />
                           </>
                         )
                       }
